@@ -22,28 +22,28 @@ const requestIp = require('request-ip')
 const app = express()
 
 const date = () => {
-	const today = new Date()
-	const year = today.getFullYear()
-	const month = ('0' + (today.getMonth() + 1)).slice(-2)
-	const day = ('0' + today.getDate()).slice(-2)
-	return year + '-' + month + '-' + day
+  const today = new Date()
+  const year = today.getFullYear()
+  const month = ('0' + (today.getMonth() + 1)).slice(-2)
+  const day = ('0' + today.getDate()).slice(-2)
+  return year + '-' + month + '-' + day
 }
 
 const time = () => {
-	const today = new Date()
-	const hours = ('0' + today.getHours()).slice(-2);
-	const minutes = ('0' + today.getMinutes()).slice(-2)
-	const seconds = ('0' + today.getSeconds()).slice(-2)
-	return hours + ':' + minutes + ':' + seconds
+  const today = new Date()
+  const hours = ('0' + today.getHours()).slice(-2);
+  const minutes = ('0' + today.getMinutes()).slice(-2)
+  const seconds = ('0' + today.getSeconds()).slice(-2)
+  return hours + ':' + minutes + ':' + seconds
 }
 
 const prefix = () => {
-	return '[' + date() + ' ' + time() + ']'
+  return '[' + date() + ' ' + time() + ']'
 }
 
 const userInfo = (req) => {
-	console.log(prefix() + ' client IP: ' + requestIp.getClientIp(req))
-	console.log(prefix() + ' url: ' + req.originalUrl)
+  console.log(prefix() + ' client IP: ' + requestIp.getClientIp(req))
+  console.log(prefix() + ' url: ' + req.originalUrl)
 };
 
 app.use(cors({
