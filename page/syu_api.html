@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>unofficial_syu_api</title>
+  <meta property="og:title" content="비공식 삼육대학교 공통교양 확인">
+  <meta property="og:description" content="비공식 삼육대학교 공통교양 확인">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
+  <link href="/css/media.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="class-header">
+        <span style="font-size: 40px"><strong>unofficial_syu_api</strong></span>
+      </div>
+      <div class="class-header">
+        <p>2023, 삼육대학교 수강편람 - 공통 교양 <strong><span id="count" style="color: yellow;"></span></strong>가 존재합니다.</p>
+        <p style="font-size: 20px; color: #ff6262">PC 버전 기준으로 <strong>전체 화면</strong>에 최적화 되어있습니다.</p>
+        <details>
+          <summary style="color: yellow;">간단한 설명 확인하기..</summary>
+          <br>
+          <div class="border border-white">
+            <p>
+              <strong>
+                <a href="https://www.syu.ac.kr/blog/%ec%8b%a0%ec%9e%85%ec%83%9d%ec%9d%84-%ec%9c%84%ed%95%9c-%ea%b5%90%ec%96%91%ea%b5%90%ea%b3%bc%eb%aa%a9-%ec%88%98%ea%b0%95-%ea%b0%80%ec%9d%b4%eb%93%9c-2/?pageds=2&k=%EC%8B%A0%EC%9E%85%EC%83%9D&t=&c=" target="_blank">교양교과목 수강 가이드 공지 클릭 (2022년 기준)</a>
+              </strong>
+            </p>
+            <p>- 기초교양 (교양필수)</p>
+            <p>- 인성교양 (교양선택)</p>
+            <p>- 일반선택 (교양선택)</p>
+            <p>- 자연과학영역 (교양선택)</p>
+            <p>- 사회과학영역 (교양선택)</p>
+            <p>- 인문예술영역 (교양선택)</p>
+            <p>- 디지털 리터러시영역 (교양선택)</p>
+            <p>- 교직영역 (교직필수)</p>
+          </div>
+        </details>
+      </div>
+      <div class="class-header">
+        <span>검색 기준 (요일): 총 <strong><span id="daySelectCount" style="color: yellow;"></span></strong>가 검색 되었습니다.</span>
+        <span style="color: #979797;">(요일, 시간을 기준으로 정리 되어있습니다.)</span>
+        <div class="class-search">
+          <select class="form-select form-select-sm" name="daySelect" onchange="daySelectEvent(this)">
+            <option value="전체" selected>-전체 선택-</option>
+            <option value="월">-월요일-</option>
+            <option value="화">-화요일-</option>
+            <option value="수">-수요일-</option>
+            <option value="목">-목요일-</option>
+            <option value="금">-금요일-</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="class-section">
+        <h2>기초교양: <strong><span id="1"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="11"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>인성교양: <strong><span id="2"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="22"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>일반선택영역: <strong><span id="3"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="33"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>자연과학영역: <strong><span id="4"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="44"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>사회과학영역: <strong><span id="5"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="55"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>인문예술영역: <strong><span id="6"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="66"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>디지털 리터러시영역: <strong><span id="7"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="77"></span>
+        </details>
+      </div>
+      <div class="class-section">
+        <h2>교직영역: <strong><span id="8"></span></strong></h2>
+        <hr>
+        <details>
+          <summary style="color: yellow;">확인하기..</summary>
+          <br>
+          <span id="88"></span>
+        </details>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright(C) 2023. <strong>Anonymous</strong>. All rights reserved.</p>
+    <p>(학교법인 삼육학원) 삼육대학교와 무관한 웹 사이트 입니다.</p>
+    <p style="color: #6e6e6e;">
+      For Developer API (unofficial):
+      <strong><a href="/api_show">JSON SHOW</a></strong>, <strong><a href="/api">JSON API</a></strong>
+    </p>
+    <p style="color: #6e6e6e;">last data updated: <strong><span id="time" style="color: white;"></span></strong>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

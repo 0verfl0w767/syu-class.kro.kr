@@ -1,0 +1,41 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+body {
+  background: #292929;
+  color: white;
+  font-size: 17px;
+  font-family: "NanumSquare", sans-serif;
+}
+p {
+  margin: 1rem;
+}
+a {
+  color: #44f3ff;
+  text-decoration: none;
+}
+header {
+  padding: 20px 0px 20px 0px;
+}
+section {
+  padding: 40px 0px 40px 0px;
+}
+footer {
+  background-color: #474747;
+  font-family: sans-serif;
+  font-size: 11px;
+  text-align: center;
+  padding: 20px;
+}
+.table-dark {
+  /*--bs-table-color: yellow;*/
+  --bs-table-bg: #00000000;
+  --bs-table-border-color: white;
+}
+.class-header {
+  padding: 10px 0px 10px 0px;
+}
+.class-search {
+  padding: 10px 0px 10px 0px;
+}
+.class-section {
+  padding: 30px 0px 30px 0px;
+}
