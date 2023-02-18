@@ -1,6 +1,6 @@
 let daySelectCount = 0;
 
-fetch("http://160.251.7.140/api", { method: "get" })
+fetch("https://syu-class.kro.kr/api", { method: "get" })
   .then((response) => response.json())
   .then((data) => {
     const testData = JSON.stringify(data);
