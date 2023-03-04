@@ -14,6 +14,7 @@
  *
  */
 const express = require('express')
+const { param, validationResult } = require('express-validator')
 const http = require('http')
 const cors = require('cors')
 const fs = require('fs')
@@ -58,17 +59,47 @@ app.get('/', (req, res) => {
   res.status(200).sendFile(__dirname + '/page/syu_api.html')
 })
 
-app.get('/api', (req, res) => {
+app.get('/api/docs', (req, res) => {
   userInfo(req)
-  const jsonFile = fs.readFileSync(__dirname + '/data/syu_api.json', 'utf8')
-  const jsonData = JSON.parse(jsonFile)
+  res.status(200).sendFile(__dirname + '/page/syu_api_docs.html')
+})
+
+app.get('/api/college/v1/all', (req, res) => {
+  userInfo(req)
+  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/data/학부(과).json', 'utf8'))
   res.status(200).json(jsonData)
 })
 
-app.get('/api_show', (req, res) => {
+app.get('/api/undergraduate/v1/:id', param('id').exists(), param('id').isInt({min: 1, max: 63}), (req, res) => {
   userInfo(req)
-  res.status(200).sendFile(__dirname + '/data/syu_api.json')
+  const errorFormatter = ({ location, msg, param, value, nestedErrors }) => {
+    return param + ': ' + msg
+  }
+  const result = validationResult(req).formatWith(errorFormatter)
+  if (!result.isEmpty()){
+    res.status(401).json(result)
+    return
+  }
+  const id = req.params.id
+  const undergraduates = JSON.parse(fs.readFileSync(__dirname + '/data/학부(과).json', 'utf8'))
+  let undergraduateData = null
+  for (const index in undergraduates['api']){
+    if (undergraduates['api'][index]['식별번호'] == id){
+      undergraduateData = undergraduates['api'][index]
+    }
+  }
+  if (undergraduateData === null){
+    res.status(401).json({ statusCode: 401, message: 'unknown request.' })
+    return
+  }
+  const jsonData = JSON.parse(fs.readFileSync(__dirname + '/data/전체대학/' + undergraduateData['학부(과)'] + '.json', 'utf8'))
+  res.status(200).json(jsonData)
 })
+
+// app.get('/api_show', (req, res) => {
+//   userInfo(req)
+//   res.status(200).sendFile(__dirname + '/data/syu_api.json')
+// })
 
 app.get('*', (req, res) => {
   userInfo(req)

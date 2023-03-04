@@ -1,6 +1,6 @@
 let daySelectCount = 0;
 
-fetch("https://syu-class.kro.kr/api", { method: "get" })
+fetch("https://syu-class.kro.kr/api/undergraduate/v1/15", { method: "get" })
   .then((response) => response.json())
   .then((data) => {
     const testData = JSON.stringify(data);

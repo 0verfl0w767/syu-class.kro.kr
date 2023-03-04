@@ -39,3 +39,9 @@ footer {
 .class-section {
   padding: 30px 0px 30px 0px;
 }
+.class-box {
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  margin: 10px
+}
