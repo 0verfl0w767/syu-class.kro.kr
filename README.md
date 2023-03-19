@@ -1,30 +1,43 @@
+# SYU-CLASS-PROJECT
+
+`Unofficial su-wings (SAHMYOOK UNIV.) lecture information system.`
+
+* * *
+The project started on January 29, 2023.
+
+Planner: [@0verfl0w767](https://github.com/0verfl0w767)
+
+Developer: [@0verfl0w767](https://github.com/0verfl0w767)
+* * *
+SYU-CLASS-API: [@syu-class-api](https://github.com/0verfl0w767/syu-class-api)
+
+SYU-CLASS.KRO.KR: [@syu-class.kro.kr](https://github.com/0verfl0w767/syu-class.kro.kr)
+
+SYU-CLASS-CONVERTER: [@syu-class-converter](https://github.com/0verfl0w767/syu-class-converter)
+
+SYU-CLASS-EXE: [@syu-class-exe](https://github.com/0verfl0w767/syu-class-exe)
+
+<br>
+
 # syu-class.kro.kr
 
-[비공식 삼육대학교 공통교양 확인](https://syu-class.kro.kr)
+A syu-class website for su-wings lecture information.
 
-<br/>
-
-`Sahmyook Univ. Unofficial Suwings - Class Search. 2023`
-
-2023.1.29 ~ 2023.1.30
-
-with api [@syu-class-api](https://github.com/0verfl0w767/syu-class-api)
-
-<br/>
+<br>
 
 # DNS & Hosting
 
-<br/>
+<br>
 
 <img height="64" width="64" src="" /> 내도메인.한국
 
 <img height="64" width="64" src="https://conoha.jp/common_38448/images/logo_conoha.svg" /> Conoha
 
-<br/>
+<br>
 
 # Server & SSL
 
-<br/>
+<br>
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/NGINX/" /> NGINX
 
@@ -34,21 +47,21 @@ with api [@syu-class-api](https://github.com/0verfl0w767/syu-class-api)
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/LetsEncrypt/" /> Let's Encrypt
 
-<br/>
+<br>
 
 # Front-end
 
-<br/>
+<br>
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Javascript/" /> Javascript
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Bootstrap/" /> Bootstrap
 
-<br/>
+<br>
 
 # Back-end
 
-<br/>
+<br>
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Javascript/" /> Javascript
 
@@ -56,24 +69,24 @@ with api [@syu-class-api](https://github.com/0verfl0w767/syu-class-api)
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Node.js/" /> NodeJS
 
-<br/>
+<br>
 
 # OS
 
-<br/>
+<br>
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Windows/" /> Windows 10
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Ubuntu/" /> Ubuntu
 
-<br/>
+<br>
 
 # Etc Environment
 
-<br/>
+<br>
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/VisualStudioCode/" /> Visual Studio Code
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Git/" /> Git
 
-<br/>
+<br>
