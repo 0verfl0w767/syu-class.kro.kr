@@ -113,7 +113,8 @@ function checkInfo(datas, day, className) {
         <td><span style="color: white;">${newData[i]["이수구분"]}</span></td>
         <td><span style="color: yellow;">${newData[i]["학점"]}</span></td>
         <td><span style="color: #5f6062;">${newData[i]["교수명"]}</span></td>
-        <td><span style="color: yellow;">${newData[i]["수업시간/장소"]}</span></td>
+        <td><span style="color: yellow;">${newData[i]["수업시간"]}</span></td>
+        <td><span style="color: yellow;">${newData[i]["장소"].replace(/강의실|\(小\)|\(中\)|\(大\)/g, "")}</span></td>
       </tr>
       `;
     // html_tag += `
@@ -142,7 +143,8 @@ function checkInfo(datas, day, className) {
           <th scope="col">이수구분</th>
           <th scope="col">학점</th>
           <th scope="col">교수명</th>
-          <th scope="col">수업시간/장소</th>
+          <th scope="col">수업시간
+          <th scope="col">장소</th>
         </tr>
       </thead>
       <tbody>
