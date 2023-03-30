@@ -27,4 +27,11 @@
     /* padding: 60px; */
     /* font-size: 8px; */
   }
+  .class-section .class-area {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  .class-section .class-btn {
+    font-size: 0.8rem;
+  }
 }

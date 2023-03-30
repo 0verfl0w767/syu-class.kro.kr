@@ -6,7 +6,7 @@ fetch("https://syu-class.kro.kr/api/undergraduate/v1/15", { method: "get" })
     const testData = JSON.stringify(data);
     const testDataParse = JSON.parse(testData);
     localStorage.setItem("api", JSON.stringify(data));
-    document.getElementById("time").innerHTML = testDataParse["time"];
+    // document.getElementById("time").innerHTML = testDataParse["time"];
     document.getElementById("count").innerHTML = testDataParse["api"].length + "개";
     setInfo(testDataParse, "전체");
   })
@@ -107,14 +107,18 @@ function checkInfo(datas, day, className) {
   for (let i = 0; i < newData.length; i++) {
     html_tag += `
       <tr>
-        <td><span style="color: yellow;">${newData[i]["과목코드"]}</span></td>
-        <td><strong><span style="color: white;">${newData[i]["과목명"]}</span></strong></td>
-        <td><span style="color: #5f6062;">${newData[i]["학년"]}</span></td>
-        <td><span style="color: white;">${newData[i]["이수구분"]}</span></td>
-        <td><span style="color: yellow;">${newData[i]["학점"]}</span></td>
-        <td><span style="color: #5f6062;">${newData[i]["교수명"]}</span></td>
-        <td><span style="color: yellow;">${newData[i]["수업시간"]}</span></td>
-        <td><span style="color: yellow;">${newData[i]["장소"].replace(/강의실|\(小\)|\(中\)|\(大\)/g, "")}</span></td>
+        <td nowrap><span style="color: yellow;">${newData[i]["과목코드"]}</span></td>
+        <td nowrap><strong><span style="color: white;">${newData[i]["과목명"]}</span></strong></td>
+        <td nowrap><span style="color: #5f6062;">${newData[i]["학년"]}</span></td>
+        <td nowrap><span style="color: yellow;">${newData[i]["학점"]}</span></td>
+        <td nowrap><span style="color: #5f6062;">${newData[i]["이수구분"]}</span></td>
+        <td nowrap><span style="color: #5f6062;">
+          <a href="https://everytime.kr/lecture/search?keyword=${newData[i]["교수명"]}&condition=professor" target="_blank">
+            ${newData[i]["교수명"]}
+          </a>
+        </span></td>
+        <td nowrap><span style="color: yellow;">${newData[i]["수업시간"]}</span></td>
+        <td class="text-end" nowrap><span style="color: #5f6062;">${newData[i]["장소"].replace(/강의실|\(小\)|\(中\)|\(大\)/g, "")}</span></td>
       </tr>
       `;
     // html_tag += `
@@ -134,23 +138,25 @@ function checkInfo(datas, day, className) {
     // `;
   }
   let table_tag = `
-    <table class="table table-dark">
-      <thead>
-        <tr>
-          <th scope="col">과목코드</th>
-          <th scope="col">과목명</th>
-          <th scope="col">학년</th>
-          <th scope="col">이수구분</th>
-          <th scope="col">학점</th>
-          <th scope="col">교수명</th>
-          <th scope="col">수업시간
-          <th scope="col">장소</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${html_tag}
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col" nowrap>과목코드</th>
+            <th scope="col" nowrap>과목명</th>
+            <th scope="col" nowrap>학년</th>
+            <th scope="col" nowrap>학점</th>
+            <th scope="col" nowrap>이수구분</th>
+            <th scope="col" nowrap>교수명</th>
+            <th scope="col" nowrap>수업시간
+            <th class="text-end" scope="col" nowrap>장소</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${html_tag}
+        </tbody>
+      </table>
+    </div>
     `;
   // let table_tag = `
   // <table class="table table-dark">
