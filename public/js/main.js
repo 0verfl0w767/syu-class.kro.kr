@@ -74,6 +74,14 @@ function changeDay(classInfo) {
     day = 0
   return day;
 }
+function starTest() {
+  let stars = "";
+  for (let i = 0; i < 5; i++) {
+    // stars += "<i class=\"bi bi-star\"></i>"
+    stars += "<i class=\"bi bi-star-fill\" style=\"color: yellow;\"></i>"
+  }
+  return stars;
+}
 function checkInfo(datas, day, className) {
   let newData = [];
   let html_tag = "";
@@ -110,7 +118,7 @@ function checkInfo(datas, day, className) {
   for (let i = 0; i < newData.length; i++) {
     html_tag += `
       <tr>
-        <td nowrap><span style="color: yellow;">${newData[i]["과목코드"]}</span></td>
+        <td nowrap><span style="color: #5f6062;">${newData[i]["과목코드"]}</span></td>
         <td nowrap><strong><span style="color: white;">${newData[i]["과목명"]}</span></strong></td>
         <td nowrap><span style="color: #5f6062;">${newData[i]["학년"]}</span></td>
         <td nowrap><span style="color: yellow;">${newData[i]["학점"]}</span></td>
@@ -121,7 +129,16 @@ function checkInfo(datas, day, className) {
           </a>
         </span></td>
         <td nowrap><span style="color: yellow;">${newData[i]["수업시간"]}</span></td>
-        <td class="text-end" nowrap><span style="color: #5f6062;">${newData[i]["장소"].replace(/강의실|\(小\)|\(中\)|\(大\)/g, "")}</span></td>
+        <td class="text-end" nowrap>
+          <span style="color: #5f6062;">
+            ${newData[i]["장소"].replace(/강의실|\(小\)|\(中\)|\(大\)/g, "")}
+          </span>
+        </td>
+        <td class="text-center" nowrap>
+          <span style="color: #5f6062;">
+            ${starTest()}
+          </span>
+        </td>
       </tr>
       `;
     // html_tag += `
@@ -153,6 +170,7 @@ function checkInfo(datas, day, className) {
             <th scope="col" nowrap>교수명</th>
             <th scope="col" nowrap>수업시간
             <th class="text-end" scope="col" nowrap>장소</th>
+            <th class="text-center" scope="col" nowrap>별점</th>
           </tr>
         </thead>
         <tbody>
