@@ -56,12 +56,17 @@ app.use('/', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
   userInfo(req)
-  res.status(200).sendFile(__dirname + '/page/syu_api.html')
+  res.status(200).sendFile(__dirname + '/page/index.html')
+})
+
+app.get('/info', (req, res) => {
+  userInfo(req)
+  res.status(200).sendFile(__dirname + '/page/info.html')
 })
 
 app.get('/api/docs', (req, res) => {
   userInfo(req)
-  res.status(200).sendFile(__dirname + '/page/syu_api_docs.html')
+  res.status(200).sendFile(__dirname + '/page/api/docs.html')
 })
 
 app.get('/api/college/v1/all', (req, res) => {
