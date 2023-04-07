@@ -60,6 +60,8 @@ A syu-class website for su-wings lecture information.
 
 <br>
 
+<img height="64" width="64" src="https://cdn.simpleicons.org/googleanalytics/" /> Google Analytics
+
 <img height="64" width="64" src="https://cdn.simpleicons.org/Javascript/" /> Javascript
 
 <img height="64" width="64" src="https://cdn.simpleicons.org/Bootstrap/" /> Bootstrap
