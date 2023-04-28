@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>syu class</title>
+  <meta property="og:title" content="삼육대학교 공통(교양) 검색">
+  <meta property="og:description" content="삼육대학교 공통(교양) 검색">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBVVBMP50L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SBVVBMP50L');
+  </script>
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
+  <link href="/css/media.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="class-header">
+        <span style="font-size: 1.5rem">
+          <img src="https://www.syu.ac.kr/wp-content/uploads/2018/05/pg_thum.png" width="30px" height="auto">
+          <strong>삼육대학교 학부(과) 전공 검색</strong>
+        </span>
+      </div>
+      <div class="class-header">
+        <p><span style="color: yellow;"><span id="info-year">개설년도</span> - <span id="info-semester">개설</span>학기 정규</span></strong>, 삼육대학교 수강편람 <span id="info-department">학부(과)</span> <strong><span id="info-count"
+              style="color: yellow;"></span></strong>가 검색되었습니다.</p>
+      </div>
+      <div class="class-header">
+        <span style="color: #979797;">(개설년도, 개설학기, 학부(과)를 선택해 주세요.)</span>
+        <div class="class-search">
+          <span id="year"></span>
+        </div>
+        <div class="class-search">
+          <span id="semester"></span>
+        </div>
+        <div class="class-search">
+          <span id="department"></span>
+        </div>
+      </div>
+      <div class="class-header">
+        <!-- <p>
+          <span style="color: yellow;">NEW. </span>
+          <span style="color: #63ff7d;">모바일/컴퓨터 모두 최적화된 화면을 제공합니다.</span>
+        </p> -->
+        <p>
+          <span style="color: yellow;">NEW. </span>
+          <span style="color: #63ff7d;">교수명을 누르면 해당 교수의 에브리타임 강의실 정보로 이동합니다.</span>
+        </p>
+        <p>
+          <span style="color: yellow;">NEW. </span>
+          <span style="color: #63ff7d;">
+            <a href="/info" target="_blank">필수 이수 교양과정 편성표 확인하기</a>
+          </span>
+        </p>
+        <p>
+          <span style="color: yellow;">NEW. </span>
+          <span style="color: #63ff7d;">
+            <a href="/" target="_blank">공통(교양) 확인하기</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="container">
+      <div class="class-section">
+        <div class="leftright">
+          <span class="class-area">
+            전공:
+          </span>
+        </div>
+        <hr>
+        <span id="department-info"></span>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright(C) 2023. <strong>0verfl0w767</strong>. All rights reserved.</p>
+    <p>(학교법인 삼육학원) 삼육대학교와 무관한 웹 사이트 입니다.</p>
+    <p style="color: #6e6e6e;">
+      For Developer (unofficial):
+      <strong><a href="/api/docs">API DOCS</a></strong>
+    </p>
+  </footer>
+  <!-- <script src="/js/main.js"></script> -->
+  <script src="/js/department.js"></script>
+</body>
+
+</html>
