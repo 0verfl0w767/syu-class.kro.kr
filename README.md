@@ -1,5 +1,7 @@
 # SYU-CLASS-PROJECT
 
+Repository has been relocated. -> [URL](https://github.com/syu-kr)
+
 `Unofficial su-wings (SAHMYOOK UNIV.) lecture information system.`
 
 ---
